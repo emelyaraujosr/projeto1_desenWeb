@@ -1,8 +1,8 @@
 from django.shortcuts import render
-
+from core.models import Product
 # Create your views here.
-def index(request):
-    return render(request, 'index.html')
+#def index(request):
+  #  return render(request, 'index.html')
 
 def contact(request):
     return render(request, 'contact.html')
@@ -10,6 +10,6 @@ def contact(request):
 def index(request):
     listaDeProdutos = Product.objects.all()
     context = {
-            'produtos': listaDeProdutos
+        'produto': listaDeProdutos
     }
-    return render (request, 'index.html', context)
+    return render(request, 'index.html', context)

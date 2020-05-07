@@ -1,14 +1,15 @@
+{%load static%}
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <title>Core Aplication</title>
+    <link rel="stylesheet" href="{% static 'css/estilo.css'%}">
 </head>
 <body>
     <h1> Index </h1>
-    {% for product in produtos%)
-    <p>{{produto.name}}</p>
+    {% for p in produto%}
+    <p>{{p.name}}</p>
     {%endfor%}
-
 </body>
 </html>
